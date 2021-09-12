@@ -28,13 +28,13 @@ public class Role {
     private String name;
 
     // Relationship definition
-    @ManyToMany(mappedBy = "roleList")
-    private List<User> usersList;
+    @ManyToMany(mappedBy = "roles")
+    private List<User> users;
 
-    @ManyToMany (fetch = FetchType.EAGER)
+    @ManyToMany
     @JoinTable(
-            name = "role_privilege",
+            name = "roles_privileges",
             joinColumns = @JoinColumn(name = "id_role"),
             inverseJoinColumns = @JoinColumn(name = "id_privilege"))
-    private List<Privilege> privilegeList;
+    private List<Privilege> privileges;
 }

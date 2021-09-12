@@ -28,8 +28,6 @@ public class Privilege {
     private String name;
 
     // Relationship definition
-    @ManyToMany(mappedBy = "roleList")
-    private List<User> usersList;
-    @ManyToMany(mappedBy = "privilegeList")
+    @ManyToMany(mappedBy = "privileges")
     private List<Role> roleList;
 }

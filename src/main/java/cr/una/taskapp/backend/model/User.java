@@ -36,12 +36,12 @@ public class User {
 
     // Relationship definition
     @OneToMany(mappedBy = "user")
-    private List<Task> taskList;
+    private List<Task> tasks;
 
-    @ManyToMany (fetch = FetchType.EAGER)
+    @ManyToMany
     @JoinTable(
-            name = "user_role",
+            name = "users_roles",
             joinColumns = @JoinColumn(name = "id_user"),
             inverseJoinColumns = @JoinColumn(name = "id_role"))
-    private List<Role> roleList;
+    private List<Role> roles;
 }
