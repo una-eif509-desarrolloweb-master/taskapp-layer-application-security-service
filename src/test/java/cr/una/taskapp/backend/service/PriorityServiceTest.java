@@ -23,7 +23,7 @@ import static org.mockito.Mockito.when;
 /**
  * Test for Priority Service
  *
- * @author Maikol Guzman <maikol@guzmanalan.com>
+ * @author Maikol Guzman <mike@guzmanalan.com>
  * @create 9/4/21
  */
 @RunWith(MockitoJUnitRunner.class)

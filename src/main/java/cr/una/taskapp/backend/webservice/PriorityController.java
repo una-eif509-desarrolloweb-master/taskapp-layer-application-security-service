@@ -12,11 +12,11 @@ import java.util.List;
 /**
  * Web service controller for Priority
  *
- * @author Maikol Guzman <maikol@guzmanalan.com>
+ * @author Maikol Guzman <mike@guzmanalan.com>
  * @create 9/12/21
  */
 @RestController
-@RequestMapping("v1/priorities")
+@RequestMapping("${url.priorities}")
 public class PriorityController {
 
     @Autowired

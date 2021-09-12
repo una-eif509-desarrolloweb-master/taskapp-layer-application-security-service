@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Description
  *
- * @author Maikol Guzman <maikol@guzmanalan.com>
+ * @author Maikol Guzman <mike@guzmanalan.com>
  * @create 9/12/21
  */
 @SpringBootTest

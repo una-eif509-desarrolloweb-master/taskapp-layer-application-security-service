@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Interface Definition for Task
  *
- * @author Maikol Guzman <maikol@guzmanalan.com>
+ * @author Maikol Guzman <mike@guzmanalan.com>
  * @create 9/3/21
  */
 public interface TaskService {
