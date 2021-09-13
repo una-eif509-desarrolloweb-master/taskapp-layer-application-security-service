@@ -161,19 +161,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
                 builder.substring(0, builder.length() - 2), ex));
     }
 
-    // AppAuthenticationException
-    @ExceptionHandler({InsufficientAuthenticationException.class})
-    public ResponseEntity<Object> handleInsufficientAuthenticationException(
-            final InsufficientAuthenticationException ex,
-            final WebRequest request) {
-
-        ApiError apiError = new ApiError(HttpStatus.UNAUTHORIZED);
-        apiError.setMessage("Access Unauthorized");
-        apiError.setDebugMessage(ex.getMessage());
-        apiError.addSubError(new ApiSubError("000","Access Unauthorized"));
-        return buildResponseEntity(apiError);
-    }
-
     // NotFoundException
     @ExceptionHandler({NotFoundException.class})
     public ResponseEntity<Object> handleNotFoundException(
@@ -200,19 +187,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         return buildResponseEntity(apiError);
     }
 
-    // AuthenticationServiceException
-    @ExceptionHandler({AuthenticationServiceException.class})
-    public ResponseEntity<Object> handleRAuthenticationServiceException(
-            final AuthenticationServiceException ex,
-            final WebRequest request) {
-
-        ApiError apiError = new ApiError(HttpStatus.NOT_FOUND);
-        apiError.setMessage("error occurred");
-        apiError.setDebugMessage(ex.getMessage());
-        apiError.addSubError(new ApiSubError("001","Element not found"));
-        return buildResponseEntity(apiError);
-    }
-
     // ResponseStatusException
     @ExceptionHandler({ResponseStatusException.class})
     public ResponseEntity<Object> handleResponseStatusException(
@@ -231,6 +205,33 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> handleAll(final Exception ex, final WebRequest request) {
 
         ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR);
+        apiError.setMessage("error occurred");
+        apiError.setDebugMessage(ex.getMessage());
+        apiError.addSubError(new ApiSubError("001","Element not found"));
+        return buildResponseEntity(apiError);
+    }
+
+	
+	// AppAuthenticationException
+    @ExceptionHandler({InsufficientAuthenticationException.class})
+    public ResponseEntity<Object> handleInsufficientAuthenticationException(
+            final InsufficientAuthenticationException ex,
+            final WebRequest request) {
+
+        ApiError apiError = new ApiError(HttpStatus.UNAUTHORIZED);
+        apiError.setMessage("Access Unauthorized");
+        apiError.setDebugMessage(ex.getMessage());
+        apiError.addSubError(new ApiSubError("000","Access Unauthorized"));
+        return buildResponseEntity(apiError);
+    }
+	
+    // AuthenticationServiceException
+    @ExceptionHandler({AuthenticationServiceException.class})
+    public ResponseEntity<Object> handleRAuthenticationServiceException(
+            final AuthenticationServiceException ex,
+            final WebRequest request) {
+
+        ApiError apiError = new ApiError(HttpStatus.NOT_FOUND);
         apiError.setMessage("error occurred");
         apiError.setDebugMessage(ex.getMessage());
         apiError.addSubError(new ApiSubError("001","Element not found"));

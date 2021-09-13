@@ -19,12 +19,14 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class ApiError {
+    private String localDateTime;
     private HttpStatus status;
     private String message;
     private String debugMessage;
     private List<ApiSubError> apiSubErrors;
 
     private ApiError() {
+        localDateTime = LocalDateTime.now().toString();
     }
 
     public ApiError(HttpStatus status) {
