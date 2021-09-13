@@ -30,7 +30,7 @@ public class User {
     private String lastName;
     private String password;
     private String email;
-    private Date createDate;
+    private Date dateCreated;
     private boolean enabled;
     private boolean tokenExpired;
 
