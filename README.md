@@ -37,16 +37,6 @@ The signature is composed of the encoded header, encoded payload, a secret and t
 
 This is a rough look at the composition of a JWT. For more information visit this [link](https://jwt.io/) to find an example of a JWT and its parts, and in case you want to analyze it in more detail check out this [link](http://self-issued.info/docs/draft-jones-json-web-token-01.html#anchor3).
 
-## Implementation
-
-![1*6DVI3snA8uxc5RNS99goEA.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5ac3de5f-55ef-4893-81d9-a20656ebd10b/16DVI3snA8uxc5RNS99goEA.png)
-
-Authenticate a user
-
-![1*Z-PbK1FDIz8SNtYcbAy_VA.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c9e8602e-bae0-4c49-b0b6-e2af7f97ab0c/1Z-PbK1FDIz8SNtYcbAy_VA.png)
-
-Authorization and Validate JWT
-
 ## Securing RESTful APIs with JWTs
 
 - *JSON Web Tokens*, commonly known as JWTs, are tokens that are used to authenticate users on applications.
