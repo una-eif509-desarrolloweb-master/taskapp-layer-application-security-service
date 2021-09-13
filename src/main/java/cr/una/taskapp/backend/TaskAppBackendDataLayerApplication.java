@@ -15,12 +15,7 @@ import java.util.Properties;
 public class TaskAppBackendDataLayerApplication {
     public static void main(String[] args) {
         try {
-            SpringApplication app = new SpringApplication(TaskAppBackendDataLayerApplication.class);
-            Properties props = new Properties();
-            props.setProperty("server.port", "8083");
-
-            app.setDefaultProperties(props);
-            app.run(args);
+            SpringApplication.run(TaskAppBackendDataLayerApplication.class, args);
         } catch (Exception exception) {
             System.out.println(exception);
         }
