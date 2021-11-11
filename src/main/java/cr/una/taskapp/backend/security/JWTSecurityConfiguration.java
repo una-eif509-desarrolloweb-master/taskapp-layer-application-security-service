@@ -92,7 +92,7 @@ public class JWTSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .csrf().disable();
         //TODO: OPTIONAL - the storage of that token on the client side add this [defending against CSRF attacks].
         //.addFilterBefore(statelessCsrfFilter, CsrfFilter.class);
-
+        http.cors();
         http.exceptionHandling().authenticationEntryPoint(authenticationEntryPoint);
 
         http
